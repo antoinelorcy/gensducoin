@@ -1,0 +1,49 @@
+// Colors
+$colors: (
+	primary: #533BE2,
+	primary-dark: #165C6B,
+	grey: #B2B3BF,
+	grey-light: #D8D9DF,
+	grey-lighter: #F7F7F8,
+	white: #fff,
+	black: #000,
+	black-light: #333333,
+	danger: #F94F5E
+);
+
+@function color ($key) {
+	@return map-get($colors, $key);
+}
+
+$body-font-color: color(grey);
+
+$spaces: (
+	0: 0,
+	1: 4px,
+	2: 8px,
+	3: 12px,
+	4: 16px,
+	5: 20px,
+	6: 24px
+);
+
+@function space ($key) {
+	@return map-get($spaces, $key);
+}
+
+@mixin overflow($direction: null) {
+	@if $direction != null {
+		overflow: hidden;
+
+		@if $direction == horizontal {
+			overflow-x: auto;
+		} @else if $direction == vertical {
+			overflow-y: auto;
+		}
+	} @else {
+		overflow: auto;
+	}
+
+	-webkit-overflow-scrolling: touch;
+	-ms-overflow-stype: -ms-autohiding-scrollbar;
+}

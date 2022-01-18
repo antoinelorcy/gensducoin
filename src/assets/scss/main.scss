@@ -1,0 +1,72 @@
+@import './variables';
+@import './classes';
+@import './normalize';
+@import './fonts';
+@import './breakpoints';
+@import './grid';
+@import './flex';
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+}
+
+html, 
+body {
+    min-height: 100vh;
+}
+
+body {
+    font-size: 1.4rem;
+    color: $body-font-color;
+
+    &.body--is-scroll-locked {
+        overflow: hidden;
+    }
+}
+
+.inner-width {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0;
+
+    @include breakpoint(mobile) {
+        max-width: 100%;
+        overflow: hidden;
+        padding: 0 space(3);
+    }
+}
+
+.fluid-width {
+    width: 100%;
+}
+
+input,
+textarea,
+select {
+	color: color(black-light);
+    font-weight: bold;
+
+	&::placeholder {
+		color: color(grey-light);
+        font-weight: 400;
+	}
+
+	// Edge
+	&::-ms-input-placeholder {
+		color: color(grey-light);
+        font-weight: 400;
+	}
+
+	// IE 11
+	&:-ms-input-placeholder {
+		color: color(grey-light);
+        font-weight: 400;
+	}
+}

@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+
+$ff: 'Nunito', sans-serif;
+
+body {
+	font-family: $ff;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.btn,
+.link,
+input,
+select,
+textarea {
+	font-family: $ff;
+}
+
+h1,
+h2,
+h3,
+h4 {
+	font-family: $ff;
+	font-weight: 700;
+	color: color(black-light);
+	margin: 0 0 space(3);
+}
+
+p {
+	margin: 0 0 space(3);
+}
+
+a {
+	color: color(primary);
+	text-decoration: none;
+
+	&:hover {
+		text-decoration: underline;
+	}
+}

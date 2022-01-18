@@ -1,14 +1,15 @@
-# Default starter for Gridsome
+![alt text](https://github.com/antoinelorcy/gensducoin/blob/dev/src/assets/images/logo.svg?raw=true)
 
-This is the project you get when you run `gridsome create new-project`.
+### Le concept de gensducoin.fr
+Le constat est le suivant, nous ne connaissons pas nos voisins.
 
-### 1. Install Gridsome CLI tool if you don't have
+J'ai créé cette plateforme pour faciliter la mise en relation entre les particuliers et les professionnels.
 
-`npm install --global @gridsome/cli`
+### Découvrir des professionnels proche de chez vous
+Vous êtes un particulier et vous recherchez un professionnel pour vous aider ? Vous êtes au bon endroit, grâce à gensducoin vous allez pouvoir rechercher un professionnel proche de chez vous.
 
-### 2. Create a Gridsome project
+### Présenter votre activité
+Que vous soyez indépendant, producteur local, coiffeur, artiste, maçon, électricien, ... faites découvrir votre activité à vos voisins.
 
-1. `gridsome create my-gridsome-site` to install default starter
-2. `cd my-gridsome-site` to open the folder
-3. `gridsome develop` to start a local dev server at `http://localhost:8080`
-4. Happy coding 🎉🙌
+### À propos
+Je m'appelle Antoine Lorcy, je suis développeur à Billiers. Je développe cette plateforme seul, sur mon temps libre. N'hésitez pas à m'envoyer des remarques, avis à l'adresse email suivante contact@gensducoin.fr
