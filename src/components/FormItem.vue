@@ -85,7 +85,7 @@ export default {
   margin-bottom: space(5);
 
   &--has-error {
-    /deep/ .form-label__label {
+    ::v-deep .form-label__label {
       color: color(danger);
     }
   }
