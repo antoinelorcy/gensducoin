@@ -176,7 +176,7 @@ export default {
 		});
 
 		axios
-			.get('http://localhost:8080/json/cities.json')
+			.get('https://gdc.antoinelorcy.com/json/cities.json')
 			.then(( { data } ) => {
 				this.cities = data.map((city) => {
 					return {

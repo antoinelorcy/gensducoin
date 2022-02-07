@@ -86,7 +86,7 @@ export default {
                 }
                 
 				axios
-                    .post('http://localhost:80/person-upload-image',
+                    .post('https://gdc.antoinelorcy.com/person-upload-image',
                         formData,
                         {
                             headers: {

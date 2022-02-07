@@ -297,7 +297,7 @@ export default {
 		});
 
 		axios
-			.get('http://localhost:8080/json/cities.json')
+			.get('https://gdc.antoinelorcy.com/cities')
 			.then(( { data } ) => {
 				this.cities = data.map((city) => {
 					return {
@@ -350,7 +350,7 @@ export default {
             } else {
               axios
                 .post(
-                  this.type === 'edit' ? 'http://localhost:80/person-update' : 'http://localhost:80/person-create',
+                  this.type === 'edit' ? 'https://gdc.antoinelorcy.com/person-update' : 'https://gdc.antoinelorcy.com/person-create',
                   {
                     id: this.value.identity.id,
                     email: this.value.identity.email,
