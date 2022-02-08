@@ -2,10 +2,9 @@
   "name": "gridsome",
   "private": true,
   "scripts": {
-    "serve": "npm run build:icons && npm run build:uploads && npm run develop",
+    "serve": "npm run build:icons && npm run develop",
     "build": "gridsome build",
     "build:icons": "node build/icons.js",
-    "build:uploads": "node build/uploads.js",
     "develop": "gridsome develop",
     "explore": "gridsome explore"
   },

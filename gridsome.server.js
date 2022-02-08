@@ -62,7 +62,7 @@ module.exports = function (api) {
           ...item,
           slug,
           route: `/p/${slug}-${slugJob}-${slugCity}/`,
-          thumbnail: `/uploads/${item.thumbnail}`
+          thumbnail: `http://gdc.antoinelorcy.com/uploads/thumbs/${item.thumbnail}`
         };
         console.log('person', person);
         gPeopleCollection.addNode(person);
