@@ -1,4 +1,4 @@
-![alt text](https://github.com/antoinelorcy/gensducoin/blob/dev/src/assets/images/logo.svg?raw=true)
+![alt text](https://github.com/antoinelorcy/gensducoin/blob/master/src/assets/images/logo.svg?raw=true)
 
 ### Le concept de gensducoin.fr
 Le constat est le suivant, nous ne connaissons pas nos voisins.
@@ -15,6 +15,7 @@ Que vous soyez indépendant, producteur local, coiffeur, artiste, maçon, élect
 Je m'appelle Antoine Lorcy, je suis développeur à Billiers. Je développe cette plateforme seul, sur mon temps libre. N'hésitez pas à m'envoyer des remarques, avis à l'adresse email suivante contact@gensducoin.fr
 
 ### TODO
-[] Fix save phone, website, linkedin, facebook, twitter
-[] Improve upload image (unique hash, remove old, upload on save)
-[] Send email with code to edit activity
+- [x] Fix save phone, website, linkedin, facebook, twitter
+- [ ] Improve upload image (unique hash, remove old, upload on save)
+- [ ] Send email with code to edit activity
+- [ ] SEO
