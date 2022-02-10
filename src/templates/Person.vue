@@ -36,7 +36,7 @@
 
 					<div class="person__block">
 						<h4>Venez me rencontrer</h4>
-						<a href="https://goo.gl/maps/rUyW5RwdsntuesHo6" target="_blank" class="person__adress">
+						<a :href="gMapUrl" target="_blank" class="person__adress">
 							<Icon name="pin" />
 							<template v-if="person.adress">{{ person.adress }}<br></template>{{ person.city.postal_code}} {{ person.city.name}}
 						</a>
@@ -131,6 +131,15 @@ export default {
   computed: {
 	  person () {
 		  return this.$page.person;
+	  },
+
+	  gMapUrl () {
+		  let query = '';
+		  if (this.person.adress) {
+			  query = `${this.person.adress}%20`;
+		  }
+		  query += `${this.person.city.postal_code}%20${this.person.city.name}`;
+		  return `https://maps.google.com/?q=${query}`;
 	  }
   }
 }

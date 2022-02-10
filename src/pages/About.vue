@@ -25,7 +25,7 @@
 
 				<div class="m--b-6">
 					<h3>À propos</h3>
-					<p>Je m'appelle <a href="/p/antoine-lorcy-web-developer-developpeur-web-billiers/">Antoine Lorcy, je suis développeur à Billiers</a>. Je développe cette plateforme seul, sur mon temps libre. N'hésitez pas à m'envoyer des remarques, avis à l'adresse email suivante <a href="mailto:contact@gensducoin.fr">contact@gensducoin.fr</a></p>
+					<p>N'hésitez pas à m'envoyer des remarques, avis à l'adresse email suivante <a href="mailto:contact@gensducoin.fr">contact@gensducoin.fr</a></p>
 				</div>
 			</div>
 			<div class="col-lg-6 p--3 text-align--center">

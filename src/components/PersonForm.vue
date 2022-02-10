@@ -100,6 +100,17 @@
                   :options="cities"
                 />
               </FormItem>
+              <FormItem
+                  label="Numéro / Rue"
+                  :validation="$v.value.adress.adress"
+                >
+                  <Input
+                    v-model="value.adress.adress"
+                    slot-scope="props"
+                    v-bind="props"
+                    placeholder="Votre numéro et nom de rue"
+                  />
+                </FormItem>
             </Step>
             <Step
               key="step4"

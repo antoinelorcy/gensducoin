@@ -12,7 +12,7 @@ Vous êtes un particulier et vous recherchez un professionnel pour vous aider ? 
 Que vous soyez indépendant, producteur local, coiffeur, artiste, maçon, électricien, ... faites découvrir votre activité à vos voisins.
 
 ### À propos
-Je m'appelle Antoine Lorcy, je suis développeur à Billiers. Je développe cette plateforme seul, sur mon temps libre. N'hésitez pas à m'envoyer des remarques, avis à l'adresse email suivante contact@gensducoin.fr
+N'hésitez pas à m'envoyer des remarques, avis à l'adresse email suivante contact@gensducoin.fr
 
 ### TODO
 - [x] Fix save phone, website, linkedin, facebook, twitter
