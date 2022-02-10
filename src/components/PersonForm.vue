@@ -114,7 +114,7 @@
                   <UploadImage
                     v-model="value.more.thumbnail"
                     :additional-infos="{ userName: value.identity.name }"
-                    :thumbnail="value.more.thumbnail"
+                    :thumbnail="`https://gdc.antoinelorcy.com/uploads/thumbs/${value.more.thumbnail}`"
                     slot-scope="props"
                     v-bind="props"
                     @uploading="isSubmiting = true"
@@ -395,9 +395,33 @@ export default {
 		},
 
     onThumbnailUpload ({original, thumbnail}) {
-      this.isSubmiting = false;
-      this.value.more.original = original;
-      this.value.more.thumbnail = thumbnail;
+      if (this.type === 'edit') {
+        axios.post(
+            'https://gdc.antoinelorcy.com/person-update',
+            {
+              id: this.value.identity.id,
+              thumbnail: this.value.more.thumbnail
+            },
+            {
+              headers: {'Content-Type': 'multipart/form-data'}
+            }
+          )
+          .then((data) => {
+            console.log('Person updated image with success', data);
+          })
+          .catch((error) => {
+            console.log('Person update image error', error);
+          })
+          .finally(() => {
+            this.isSubmiting = false;
+            this.value.more.original = original;
+            this.value.more.thumbnail = thumbnail;
+          })
+      } else {
+        this.isSubmiting = false;
+        this.value.more.original = original;
+        this.value.more.thumbnail = thumbnail;
+      }
     }
 	}
 }

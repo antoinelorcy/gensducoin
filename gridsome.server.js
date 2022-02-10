@@ -7,7 +7,7 @@
 var faker = require('faker/locale/fr');
 const axios = require('axios');
 const fs = require('fs');
-const apiEndPoint = 'http://gdc.antoinelorcy.com'; // 'http://localhost:1337/api';
+const apiEndPoint = 'https://gdc.antoinelorcy.com'; // 'http://localhost:1337/api';
 const exportJsonPath = './static/json/';
 
 module.exports = function (api) {
@@ -62,7 +62,7 @@ module.exports = function (api) {
           ...item,
           slug,
           route: `/p/${slug}-${slugJob}-${slugCity}/`,
-          thumbnail: `http://gdc.antoinelorcy.com/uploads/thumbs/${item.thumbnail}`
+          thumbnail: `https://gdc.antoinelorcy.com/uploads/thumbs/${item.thumbnail}`
         };
         console.log('person', person);
         gPeopleCollection.addNode(person);
