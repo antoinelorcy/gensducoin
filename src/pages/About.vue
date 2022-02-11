@@ -63,7 +63,7 @@ query {
 import Hero from '~/components/Hero';
 
 const meta = {
-  title: 'gensducoin - Le concept de gensducoin.fr',
+  title: 'Le concept de gensducoin.fr',
   description: 'Nous ne connaissons pas nos voisins... faites découvrir votre activité !',
   image: `${process.env.GRIDSOME_SITE_URL}/images/cover.png`
 };

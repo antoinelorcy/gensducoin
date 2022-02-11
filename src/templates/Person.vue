@@ -112,36 +112,52 @@ query ($id: ID!) {
 <script>
 import Sidebar from '~/components/Sidebar';
 
+const meta = {
+  title: 'Découvrez des professionnels proche de chez vous',
+  description: 'Que vous soyez indépendant, producteur local, coiffeur, artiste, maçon, électricien, ... faites découvrir votre activité à vos voisins.',
+  image: `${process.env.GRIDSOME_SITE_URL}/images/cover.png`
+};
+
 export default {
-  metaInfo () {
-	return {
-	  title: `${this.person.name} - gensducoin.fr`
+  	metaInfo() {
+      return {
+        title: this.person.name || meta.title,
+        meta: [
+          { name: 'description', content: this.person.description || meta.description },
+          { name: 'og:title', content: this.person.name || meta.title },
+          { name: 'og:description', content: this.person.description || meta.description },
+          { name: 'og:image', content: this.person.thumbnail || meta.image },
+          { name: 'twitter:card', content: 'summary_large_image' },
+          { name: 'twitter:title', content: this.person.name || meta.title },
+          { name: 'twitter:description', content: this.person.description || meta.description },
+          { name: 'twitter:image', content: this.person.thumbnail || meta.image }
+        ]
+      }
+    },
+
+	components: {
+		Sidebar
+	},
+
+	data () {
+		return {
+		}
+	},
+
+	computed: {
+		person () {
+			return this.$page.person;
+		},
+
+		gMapUrl () {
+			let query = '';
+			if (this.person.adress) {
+				query = `${this.person.adress}%20`;
+			}
+			query += `${this.person.city.postal_code}%20${this.person.city.name}`;
+			return `https://maps.google.com/?q=${query}`;
+		}
 	}
-  },
-
-  components: {
-	  Sidebar
-  },
-
-  data () {
-	return {
-	}
-  },
-
-  computed: {
-	  person () {
-		  return this.$page.person;
-	  },
-
-	  gMapUrl () {
-		  let query = '';
-		  if (this.person.adress) {
-			  query = `${this.person.adress}%20`;
-		  }
-		  query += `${this.person.city.postal_code}%20${this.person.city.name}`;
-		  return `https://maps.google.com/?q=${query}`;
-	  }
-  }
 }
 </script>
 

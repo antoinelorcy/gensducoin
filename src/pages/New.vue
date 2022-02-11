@@ -32,7 +32,7 @@ import Sidebar from '~/components/Sidebar';
 import PersonForm from '~/components/PersonForm';
 
 const meta = {
-  title: 'gensducoin - Faites découvrir votre activité',
+  title: 'Faites découvrir votre activité',
   description: 'Que vous soyez indépendant, producteur local, coiffeur, artiste, maçon, électricien, ... faites découvrir votre activité à vos voisins.',
   image: `${process.env.GRIDSOME_SITE_URL}/images/cover.png`
 };

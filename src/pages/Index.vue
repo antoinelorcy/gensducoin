@@ -91,7 +91,7 @@ import Filters from '~/components/Filters';
 import Empty from '~/components/Empty';
 
 const meta = {
-  title: 'gensducoin - Découvrez des professionnels proche de chez vous',
+  title: 'Découvrez des professionnels proche de chez vous',
   description: 'Que vous soyez indépendant, producteur local, coiffeur, artiste, maçon, électricien, ... faites découvrir votre activité à vos voisins.',
   image: `${process.env.GRIDSOME_SITE_URL}/images/cover.png`
 };
