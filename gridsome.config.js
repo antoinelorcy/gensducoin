@@ -13,7 +13,7 @@ function addStyleResource (rule) {
 
 module.exports = {
   siteName: 'gensducoin',
-  siteUrl: 'https://gensducoin.fr',
+  siteUrl: process.env.GRIDSOME_SITE_URL,
   plugins: [
     'gridsome-plugin-robots',
     '@gridsome/plugin-sitemap'

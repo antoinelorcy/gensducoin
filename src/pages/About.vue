@@ -65,7 +65,7 @@ import Hero from '~/components/Hero';
 const meta = {
   title: 'gensducoin - Le concept de gensducoin.fr',
   description: 'Nous ne connaissons pas nos voisins... faites découvrir votre activité !',
-  image: require('~/assets/images/cover.png')
+  image: `${process.env.GRIDSOME_SITE_URL}/images/cover.png`
 };
 
 export default {

@@ -93,7 +93,7 @@ import Empty from '~/components/Empty';
 const meta = {
   title: 'gensducoin - Découvrez des professionnels proche de chez vous',
   description: 'Que vous soyez indépendant, producteur local, coiffeur, artiste, maçon, électricien, ... faites découvrir votre activité à vos voisins.',
-  image: require('~/assets/images/cover.png')
+  image: `${process.env.GRIDSOME_SITE_URL}/images/cover.png`
 };
 
 export default {
