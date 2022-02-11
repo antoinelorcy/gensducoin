@@ -91,7 +91,7 @@ export default {
 
                 axios
                     .post(
-                    'https://gdc.antoinelorcy.com/signin',
+                    process.env.GRIDSOME_API_URL + '/signin',
                     {
                         email: this.email,
                         code: this.code

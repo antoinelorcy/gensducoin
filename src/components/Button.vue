@@ -105,7 +105,7 @@ export default {
 	}
 
 	@each $key, $value in $colors {
-		&.btn--color-#{$key} {
+		&.btn--color-#{'' + $key} {
 			background-color: $value;
 			border-color: $value;
 

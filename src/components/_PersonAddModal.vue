@@ -176,7 +176,7 @@ export default {
 		});
 
 		axios
-			.get('https://gdc.antoinelorcy.com/json/cities.json')
+			.get(process.env.GRIDSOME_API_URL + '/json/cities.json')
 			.then(( { data } ) => {
 				this.cities = data.map((city) => {
 					return {

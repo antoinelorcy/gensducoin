@@ -43,7 +43,7 @@ $spinner-sizes: (
   }
 
   @each $key, $size in $spinner-sizes {
-    &--#{$key}:before {
+    &--#{'' + $key}:before {
       width: #{$size}px;
       height: #{$size}px;
     }

@@ -86,7 +86,7 @@ export default {
                 }
                 
 				axios
-                    .post('https://gdc.antoinelorcy.com/person-upload-image',
+                    .post(process.env.GRIDSOME_API_URL + '/person-upload-image',
                         formData,
                         {
                             headers: {

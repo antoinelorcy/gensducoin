@@ -1,13 +1,6 @@
-// Server API makes it possible to hook into various parts of Gridsome
-// on server-side and add custom data to the GraphQL data layer.
-// Learn more: https://gridsome.org/docs/server-api/
-
-// Changes here require a server restart.
-// To restart press CTRL + C in terminal and run `gridsome develop`
-var faker = require('faker/locale/fr');
 const axios = require('axios');
 const fs = require('fs');
-const apiEndPoint = 'https://gdc.antoinelorcy.com'; // 'http://localhost:1337/api';
+const apiEndPoint = process.env.GRIDSOME_API_URL; // 'https://gdc.antoinelorcy.com'; // 'http://localhost:1337/api';
 const exportJsonPath = './static/json/';
 
 module.exports = function (api) {
@@ -62,7 +55,7 @@ module.exports = function (api) {
           ...item,
           slug,
           route: `/p/${slug}-${slugJob}-${slugCity}/`,
-          thumbnail: `https://gdc.antoinelorcy.com/uploads/thumbs/${item.thumbnail}`
+          thumbnail: `${process.env.GRIDSOME_API_URL}/uploads/thumbs/${item.thumbnail}`
         };
         console.log('person', person);
         gPeopleCollection.addNode(person);

@@ -16,6 +16,14 @@ N'hésitez pas à m'envoyer des remarques, avis à l'adresse email suivante cont
 
 ### TODO
 - [x] Fix save phone, website, linkedin, facebook, twitter
+- [x] Fix scss deprecation warnings
 - [ ] Improve upload image (unique hash, remove old, upload on save)
 - [ ] Send email with code to edit activity
 - [ ] SEO
+    og:title
+    og:description
+    og:image
+    twitter:card
+    twitter:title
+    twitter:description
+    twitter:image

@@ -39,10 +39,28 @@ import Sidebar from '~/components/Sidebar';
 import PersonSignin from '~/components/PersonSignin';
 import PersonForm from '~/components/PersonForm';
 
+const meta = {
+  title: 'gensducoin - Faites découvrir votre activité',
+  description: 'Que vous soyez indépendant, producteur local, coiffeur, artiste, maçon, électricien, ... faites découvrir votre activité à vos voisins.',
+  image: require('~/assets/images/cover.png')
+};
+
 export default {
-  metaInfo: {
-    title: 'Editer mon activité - gensducoin.fr'
-  },
+  metaInfo() {
+      return {
+        title: meta.title,
+        meta: [
+          { name: 'description', content: meta.description },
+          { name: 'og:title', content: meta.title },
+          { name: 'og:description', content: meta.description },
+          { name: 'og:image', content: meta.image },
+          { name: 'twitter:card', content: 'summary_large_image' },
+          { name: 'twitter:title', content: meta.title },
+          { name: 'twitter:description', content: meta.description },
+          { name: 'twitter:image', content: meta.image }
+        ]
+      }
+	},
 
   components: {
       Sidebar,

@@ -125,7 +125,7 @@
                   <UploadImage
                     v-model="value.more.thumbnail"
                     :additional-infos="{ userName: value.identity.name }"
-                    :thumbnail="`https://gdc.antoinelorcy.com/uploads/thumbs/${value.more.thumbnail}`"
+                    :thumbnail="`${process.env.GRIDSOME_API_URL}/uploads/thumbs/${value.more.thumbnail}`"
                     slot-scope="props"
                     v-bind="props"
                     @uploading="isSubmiting = true"
@@ -308,7 +308,7 @@ export default {
 		});
 
 		axios
-			.get('https://gdc.antoinelorcy.com/cities')
+			.get(process.env.GRIDSOME_API_URL + '/cities')
 			.then(( { data } ) => {
 				this.cities = data.map((city) => {
 					return {
@@ -361,7 +361,7 @@ export default {
             } else {
               axios
                 .post(
-                  this.type === 'edit' ? 'https://gdc.antoinelorcy.com/person-update' : 'https://gdc.antoinelorcy.com/person-create',
+                  `${process.env.GRIDSOME_API_URL}/person-${this.type === 'edit' ? 'update' : 'create'}`,
                   {
                     id: this.value.identity.id,
                     email: this.value.identity.email,
@@ -408,7 +408,7 @@ export default {
     onThumbnailUpload ({original, thumbnail}) {
       if (this.type === 'edit') {
         axios.post(
-            'https://gdc.antoinelorcy.com/person-update',
+            process.env.GRIDSOME_API_URL + '/person-update',
             {
               id: this.value.identity.id,
               thumbnail: this.value.more.thumbnail

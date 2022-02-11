@@ -53,7 +53,7 @@ $radio-size: 13px;
     width: $radio-size;
     height: $radio-size;
     box-shadow: 0 0 0 1px color(grey-light);
-    border-radius: $radio-size/2;
+    border-radius: calc($radio-size/2);
     border: 2px solid color(white);
     margin-left: 0.1rem;
     transition: all 0.3s;

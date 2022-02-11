@@ -17,7 +17,7 @@ $grid-bp: (
 
 	@each $bp, $size in $grid-bp {
 		@for $i from 1 through $grid-columns {
-			$percent: $i / $grid-columns * 100%;
+			$percent: calc($i / $grid-columns) * 100%;
 
 			@media screen and (min-width: $size) {
 				> .col-#{$bp}-#{$i} {

@@ -90,9 +90,27 @@ import PeopleList from '~/components/PeopleList';
 import Filters from '~/components/Filters';
 import Empty from '~/components/Empty';
 
+const meta = {
+  title: 'gensducoin - Découvrez des professionnels proche de chez vous',
+  description: 'Que vous soyez indépendant, producteur local, coiffeur, artiste, maçon, électricien, ... faites découvrir votre activité à vos voisins.',
+  image: require('~/assets/images/cover.png')
+};
+
 export default {
-    metaInfo: {
-        title: 'Les gens du coin - gensducoin.fr'
+    metaInfo() {
+      return {
+        title: meta.title,
+        meta: [
+          { name: 'description', content: meta.description },
+          { name: 'og:title', content: meta.title },
+          { name: 'og:description', content: meta.description },
+          { name: 'og:image', content: meta.image },
+          { name: 'twitter:card', content: 'summary_large_image' },
+          { name: 'twitter:title', content: meta.title },
+          { name: 'twitter:description', content: meta.description },
+          { name: 'twitter:image', content: meta.image }
+        ]
+      }
     },
 
     components: {

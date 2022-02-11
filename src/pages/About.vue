@@ -29,7 +29,7 @@
 				</div>
 			</div>
 			<div class="col-lg-6 p--3 text-align--center">
-				<g-image src="~/assets/images/logo-topo.png" width="400" />
+				<g-image src="~/assets/images/logo-topo-color.png" width="400" />
 			</div>
 		</div>
 		
@@ -62,10 +62,28 @@ query {
 <script>
 import Hero from '~/components/Hero';
 
+const meta = {
+  title: 'gensducoin - Le concept de gensducoin.fr',
+  description: 'Nous ne connaissons pas nos voisins... faites découvrir votre activité !',
+  image: require('~/assets/images/cover.png')
+};
+
 export default {
-	metaInfo: {
-		title: 'Le concept - gensducoin.fr'
-	},
+	metaInfo() {
+      return {
+        title: meta.title,
+        meta: [
+          { name: 'description', content: meta.description },
+          { name: 'og:title', content: meta.title },
+          { name: 'og:description', content: meta.description },
+          { name: 'og:image', content: meta.image },
+          { name: 'twitter:card', content: 'summary_large_image' },
+          { name: 'twitter:title', content: meta.title },
+          { name: 'twitter:description', content: meta.description },
+          { name: 'twitter:image', content: meta.image }
+        ]
+      }
+    },
 
 	components: {
 		Hero
