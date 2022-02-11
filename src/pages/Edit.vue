@@ -107,7 +107,10 @@ export default {
 
   methods: {
       onSigned (person) {
-          this.person = person;
+          this.person = {
+            ...person,
+            thumbnail: `${process.env.GRIDSOME_API_URL}/uploads/thumbs/${person.thumbnail}`
+          };
           this.isSignedUp = true;
       }
   }

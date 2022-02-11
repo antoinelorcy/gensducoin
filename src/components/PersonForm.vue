@@ -125,7 +125,7 @@
                   <UploadImage
                     v-model="value.more.thumbnail"
                     :additional-infos="{ userName: value.identity.name }"
-                    :thumbnail="`${process.env.GRIDSOME_API_URL}/uploads/thumbs/${value.more.thumbnail}`"
+                    :thumbnail="value.more.thumbnail"
                     slot-scope="props"
                     v-bind="props"
                     @uploading="isSubmiting = true"
